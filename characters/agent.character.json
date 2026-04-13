@@ -2,9 +2,11 @@
   "name": "Vectra",
   "username": "vectra",
   "plugins": [
-    "@elizaos/plugin-bootstrap",
-    "@elizaos/plugin-openai"
-  ],
+  "@elizaos/plugin-bootstrap",
+  "@elizaos/plugin-openai",
+  "@elizaos/plugin-anthropic",
+  "@elizaos/plugin-telegram"
+],
   "settings": {
     "model": "Qwen3.5-9B-FP8",
     "secrets": {}

@@ -1,5 +1,4 @@
 import { type Plugin } from "@elizaos/core";
-import { startTelegramBot } from './telegram';
 
 const exampleAction = {
   name: "EXAMPLE_ACTION",
@@ -19,10 +18,5 @@ export const customPlugin: Plugin = {
   providers: [],
   evaluators: [],
 };
-
-const telegramToken = process.env.TELEGRAM_BOT_TOKEN;
-if (telegramToken) {
-  startTelegramBot(telegramToken);
-}
 
 export default customPlugin;

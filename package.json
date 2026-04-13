@@ -12,7 +12,7 @@
     "@elizaos/plugin-anthropic": "^1.5.12",
     "@elizaos/plugin-bootstrap": "^1.0.0",
     "@elizaos/plugin-openai": "^1.0.0",
-    "telegraf": "^4.16.3"
+    "@elizaos/plugin-telegram": "^1.0.0"
   },
   "devDependencies": {
     "@elizaos/cli": "^1.0.0",
