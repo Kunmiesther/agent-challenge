@@ -1,23 +1,29 @@
 {
+  "version": "0.1",
+  "type": "container",
+  "meta": {
+    "trigger": "cli"
+  },
   "ops": [
     {
-      "id": "agent",
+      "type": "container/run",
+      "id": "vectra-agent",
       "args": {
-        "image": "yourusername/nosana-eliza-agent:latest",
-        "expose": 3000,
+        "image": "kunmiesther/vectra-agent:latest",
+        "ports": ["3001:3001"],
         "env": {
           "OPENAI_API_KEY": "nosana",
-          "OPENAI_API_URL": "TODO: replace with actual Nosana Qwen3.5 endpoint URL",
-          "MODEL_NAME": "qwen3.5-27b",
-          "SERVER_PORT": "3000",
+          "OPENAI_API_KEY_SKIP_VALIDATION": "true",
+          "OPENAI_BASE_URL": "https://5i8frj7ann99bbw9gzpprvzj2esugg39hxbb4unypskq.node.k8s.prd.nos.ci/v1",
+          "OPENAI_API_URL": "https://5i8frj7ann99bbw9gzpprvzj2esugg39hxbb4unypskq.node.k8s.prd.nos.ci/v1",
+          "MODEL_NAME": "Qwen3.5-9B-FP8",
+          "SMALL_MODEL": "Qwen3.5-9B-FP8",
+          "MEDIUM_MODEL": "Qwen3.5-9B-FP8",
+          "LARGE_MODEL": "Qwen3.5-9B-FP8",
+          "SERVER_PORT": "3001",
           "NODE_ENV": "production"
         }
-      },
-      "execution": {
-        "group": "run"
-      },
-      "type": "container/run"
+      }
     }
-  ],
-  "version": "0.1"
+  ]
 }
